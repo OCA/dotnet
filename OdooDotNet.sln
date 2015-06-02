@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdooTypedClasses", "OdooTypedClasses\OdooTypedClasses.csproj", "{3C002A71-0160-4A6F-B0E5-471CD2EFFDBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdooRpcWrapper", "OdooRpcWrapper\OdooRpcWrapper.csproj", "{116F40F1-BD0B-45DB-9AD7-98912C51D08C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{C82E4691-3E69-47D1-BC14-0F745EEE64B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C002A71-0160-4A6F-B0E5-471CD2EFFDBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C002A71-0160-4A6F-B0E5-471CD2EFFDBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C002A71-0160-4A6F-B0E5-471CD2EFFDBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C002A71-0160-4A6F-B0E5-471CD2EFFDBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116F40F1-BD0B-45DB-9AD7-98912C51D08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116F40F1-BD0B-45DB-9AD7-98912C51D08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116F40F1-BD0B-45DB-9AD7-98912C51D08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116F40F1-BD0B-45DB-9AD7-98912C51D08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82E4691-3E69-47D1-BC14-0F745EEE64B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82E4691-3E69-47D1-BC14-0F745EEE64B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82E4691-3E69-47D1-BC14-0F745EEE64B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82E4691-3E69-47D1-BC14-0F745EEE64B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
