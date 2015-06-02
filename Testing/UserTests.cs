@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OdooTypedClasses;
 using System.Collections.Generic;
 using OdooRpcWrapper;
+using NUnit.Framework;
 
 namespace Testing
 {
-    [TestClass]
+    [TestFixture]
     public class UserTest
     {
         private OdooAPI _api;
@@ -14,8 +14,8 @@ namespace Testing
         private OdooRepository<Partner> _partnerRepo;
         private IOdooRepository<User> _repository;
         private System.Net.WebProxy _proxy;
-        
-        [TestInitialize]
+
+        [TestFixtureSetUp]
         public void Init()
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, 
@@ -29,7 +29,7 @@ namespace Testing
             _bankRepo = new OdooRepository<Bank>(_api);
         }
 
-        [TestMethod]
+        [Test]
         public void TestRead()
         {
             bool success = false;
@@ -53,13 +53,13 @@ namespace Testing
             //Assert.IsTrue(success);
         }
 
-        [TestMethod]
+        [Test]
         public void TestPartnerAll()
         {
             _partnerRepo.ReadAll();
         }
 
-        [TestMethod]
+        [Test]
         public void GetAllPartners()
         {
             // Create Credentials
