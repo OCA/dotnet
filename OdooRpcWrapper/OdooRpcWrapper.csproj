@@ -43,6 +43,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Exceptions\MissingOdooObjectAttributeException.cs" />
+    <Compile Include="Exceptions\OdooFieldNotFoundException.cs" />
+    <Compile Include="Exceptions\OdooLoginException.cs" />
+    <Compile Include="Exceptions\OdooModelNotFoundException.cs" />
+    <Compile Include="IOdooAPI.cs" />
+    <Compile Include="IOdooCommonRpc.cs" />
+    <Compile Include="IOdooObjectRpc.cs" />
+    <Compile Include="IOdooRepository.cs" />
+    <Compile Include="OdooAPI.cs" />
+    <Compile Include="OdooAPI_Create.cs" />
+    <Compile Include="OdooAPI_Read.cs" />
+    <Compile Include="OdooAPI_Remove.cs" />
+    <Compile Include="OdooAPI_Search.cs" />
+    <Compile Include="OdooAPI_Validate.cs" />
+    <Compile Include="OdooAPI_Write.cs" />
+    <Compile Include="OdooAttribute.cs" />
+    <Compile Include="OdooConnectionCredentials.cs" />
+    <Compile Include="OdooLoginResult.cs" />
+    <Compile Include="OdooMany2oneAttribute.cs" />
+    <Compile Include="OdooModel.cs" />
+    <Compile Include="OdooObjectAttribute.cs" />
+    <Compile Include="OdooOne2manyAttribute.cs" />
+    <Compile Include="OdooPropertyAttribute.cs" />
+    <Compile Include="OdooRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
