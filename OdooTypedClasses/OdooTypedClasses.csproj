@@ -47,6 +47,12 @@
     <Compile Include="State.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OdooRpcWrapper\OdooRpcWrapper.csproj">
+      <Project>{116f40f1-bd0b-45db-9ad7-98912c51d08c}</Project>
+      <Name>OdooRpcWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
