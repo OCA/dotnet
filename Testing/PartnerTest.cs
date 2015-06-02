@@ -1,18 +1,18 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OdooTypedClasses;
 using System.Collections.Generic;
 using OdooRpcWrapper;
+using NUnit.Framework;
 
 namespace Testing
 {
-    [TestClass]
+    [TestFixture]
     public class PartnerTest
     {
         private OdooAPI _api;
         private IOdooRepository<Partner> _repository;
         
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void Init()
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, TestCreds.Database, TestCreds.Username, TestCreds.Password);
@@ -21,7 +21,7 @@ namespace Testing
             _repository = new OdooRepository<Partner>(_api);
         }
 
-        [TestMethod]
+        [Test]
         public void TestCreate()
         {
             Partner _Newpartner = new Partner()
@@ -34,7 +34,7 @@ namespace Testing
             Assert.AreNotEqual(_Newpartner.Id, 0);
         }
 
-        [TestMethod]
+        [Test]
         public void TestRead()
         {
             Partner _Newpartner = new Partner()
@@ -60,7 +60,7 @@ namespace Testing
             Assert.IsTrue(success);
         }
 
-        [TestMethod]
+        [Test]
         public void TestWrite()
         {
             Partner _Newpartner = new Partner()
@@ -94,7 +94,7 @@ namespace Testing
             Assert.IsTrue(success);
         }
 
-        [TestMethod]
+        [Test]
         public void TestRemove()
         {
             Partner _Newpartner = new Partner()

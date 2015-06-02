@@ -1,22 +1,22 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 using OdooTypedClasses;
 using Testing.TypedTestClasses;
 using OdooRpcWrapper.Exceptions;
 using System.Collections.Generic;
 using OdooRpcWrapper;
+using NUnit.Framework;
 
 namespace Testing
 {
-    [TestClass]
+    [TestFixture]
     public class ValidationTests
     {
         private OdooAPI _api;
         private OdooRepository<BadUser1> _UsersRepo;
         private WebProxy _proxy;
 
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void Init()
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, TestCreds.Database, TestCreds.Username, TestCreds.Password);
@@ -26,7 +26,7 @@ namespace Testing
             _UsersRepo = new OdooRepository<BadUser1>(_api);
         }
 
-        [TestMethod]
+        [Test]
         public void GoodModelTest()
         {
             // Check if missing OdooModel attribute throws exception
@@ -42,7 +42,7 @@ namespace Testing
             Assert.IsTrue(true);
         }
 
-        [TestMethod]
+        [Test]
         public void MissingModelNameTest()
         {
             // Check if missing OdooModel attribute throws exception
@@ -62,7 +62,7 @@ namespace Testing
             }
         }
 
-        [TestMethod]
+        [Test]
         public void InvalidModelNameTest()
         {
             // Check if bad OdooModel attribute throws exception
@@ -82,7 +82,7 @@ namespace Testing
             }
         }
 
-        [TestMethod]
+        [Test]
         public void InvalidFieldNameTest()
         {
             // Check if bad field attribute throws exception
@@ -102,12 +102,12 @@ namespace Testing
             }
         }
 
-        [TestMethod]
+        [Test]
         public void IdFieldMissing()
         {
         }
 
-        [TestMethod]
+        [Test]
         public void RepoTest()
         {
             try
