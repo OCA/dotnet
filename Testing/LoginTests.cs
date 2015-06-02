@@ -13,7 +13,7 @@ namespace Testing
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, TestCreds.Database, TestCreds.Username, TestCreds.Password);
             OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(api.Login(), OdooLoginResult.Success);
+            Assert.AreEqual(OdooLoginResult.Success, api.Login());
         }
 
         [Test]
@@ -21,7 +21,7 @@ namespace Testing
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, TestCreds.Database, "qsmdlfkjqsmdflkjqsdm", TestCreds.Password);
             OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(api.Login(), OdooLoginResult.InvalidCredentials);
+            Assert.AreEqual(OdooLoginResult.InvalidCredentials, api.Login());
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace Testing
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, TestCreds.Database, TestCreds.Username, "blablabla");
             OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(api.Login(), OdooLoginResult.InvalidCredentials);
+            Assert.AreEqual(OdooLoginResult.InvalidCredentials, api.Login());
         }
 
         [Test]
@@ -37,7 +37,7 @@ namespace Testing
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials("total.jiberish", TestCreds.Database, "qsmdlfkjqsmdflkjqsdm", TestCreds.Password);
             OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(api.Login(), OdooLoginResult.InvalidUri);
+            Assert.AreEqual(OdooLoginResult.InvalidUri, api.Login());
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Testing
         {
             OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, "blablabla", TestCreds.Username, TestCreds.Password);
             OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(api.Login(), OdooLoginResult.InvalidDatabase);
+            Assert.AreEqual(OdooLoginResult.InvalidDatabase, api.Login());
         }
     }
 }
