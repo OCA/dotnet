@@ -1,11 +1,17 @@
 language: csharp
 solution: OdooDotNet.sln
+env:
+  global:
+  - VERSION="8.0"
+
 install:
+  - createdb test
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
   - nuget restore OdooDotNet.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
 script:
   - xbuild /p:Configuration=Release OdooDotNet.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Testing/bin/Release/Testing.dll
