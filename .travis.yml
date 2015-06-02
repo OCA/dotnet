@@ -14,8 +14,7 @@ env:
 
 install:
   - createdb test
-  - pip install pytz
-  - git clone https://github.com/savoirfairelinux/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools -b unhardcode
+  - git clone https://github.com/mathi123/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools -b unhardcode
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
   - nuget restore OdooDotNet.sln
