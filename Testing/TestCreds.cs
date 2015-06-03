@@ -19,7 +19,7 @@ namespace Testing
         //public static string Username = "admin";
         //public static string Password = "admin";
 
-        public static string Link = "localhost:8069";
+        public static string Link = "localhost";
         public static string Database = "test";
         public static string Username = "admin";
         public static string Password = "admin";
