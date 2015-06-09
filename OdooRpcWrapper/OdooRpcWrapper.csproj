@@ -65,12 +65,6 @@
     <Compile Include="OdooRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\xmlrpc\xmlrpc.csproj">
-      <Project>{1b4b0a58-0afb-4090-91dd-18912cc7de65}</Project>
-      <Name>xmlrpc</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
