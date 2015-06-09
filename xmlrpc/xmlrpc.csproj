@@ -95,9 +95,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="AssemblyBuildNumber.cs" />
+    <Compile Include="AssemblyDesc.cs" />
+    <Compile Include="AssemblyDescFX1_0.cs" />
     <Compile Include="DateTime8601.cs" />
     <Compile Include="GuidEx.cs">
       <SubType>Code</SubType>
