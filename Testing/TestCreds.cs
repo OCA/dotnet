@@ -9,20 +9,14 @@ namespace Testing
 {
     /// <summary>
     /// Credentials for tests!!
+    /// Change for local testing.
     /// </summary>
     public class TestCreds
     {
         public static WebProxy Proxy = null;
-        //public static WebProxy Proxy = new WebProxy("", true, null, new NetworkCredential("", ""));
-        //public static string Link = "http://2947826-19-98fcd3.runbot1.odoo-community.org";
-        //public static string Database = "2947826-19-98fcd3-all";
-        //public static string Username = "admin";
-        //public static string Password = "admin";
-
         public static string Link = "http://localhost:8069";
         public static string Database = "test";
         public static string Username = "admin";
         public static string Password = "admin";
-        
     }
 }
