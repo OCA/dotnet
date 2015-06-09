@@ -40,12 +40,12 @@ namespace Testing
             Assert.AreEqual(OdooLoginResult.InvalidUri, api.Login());
         }
 
-        [Test]
-        public void TestLoginWithBadDatabase()
-        {
-            OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, "blablabla", TestCreds.Username, TestCreds.Password);
-            OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
-            Assert.AreEqual(OdooLoginResult.InvalidDatabase, api.Login());
-        }
+        //[Test]
+        //public void TestLoginWithBadDatabase()
+        //{
+        //    OdooConnectionCredentials creds = new OdooConnectionCredentials(TestCreds.Link, "blablabla", TestCreds.Username, TestCreds.Password);
+        //    OdooAPI api = new OdooAPI(creds, TestCreds.Proxy);
+        //    Assert.AreEqual(OdooLoginResult.InvalidDatabase, api.Login());
+        //}
     }
 }
