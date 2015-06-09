@@ -76,14 +76,17 @@ namespace OdooRpcWrapper
             }
             catch (UriFormatException uriEx)
             {
+                Console.WriteLine(uriEx.StackTrace);
                 _loginResult = OdooLoginResult.InvalidUri;
             }
             catch (XmlRpcInvalidXmlRpcException invEx)
             {
+                Console.WriteLine(invEx.StackTrace);
                 _loginResult = OdooLoginResult.InvalidDatabase;
             }
             catch(Exception other)
             {
+                Console.WriteLine(other.StackTrace);
                 _loginResult = OdooLoginResult.Unknown;
             }
 
