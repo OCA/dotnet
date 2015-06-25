@@ -23,3 +23,5 @@ Please report issues on [github](https://github.com/OCA/dotnet/issues)
 ![User](/doc/img/Screenshot-User-Class.JPG)
 
 ![Partner](/doc/img/Screenshot-Partner-Class.JPG)
+
+![Repository](/doc/img/Screenshot-Repository-Class.JPG)

@@ -26,6 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{1FD2FAC0-225E-48CB-9AC5-9EFD17BF5741}"
 	ProjectSection(SolutionItems) = preProject
 		doc\img\Screenshot-Partner-Class.JPG = doc\img\Screenshot-Partner-Class.JPG
+		doc\img\Screenshot-Repository-Class.JPG = doc\img\Screenshot-Repository-Class.JPG
 		doc\img\Screenshot-User-Class.JPG = doc\img\Screenshot-User-Class.JPG
 	EndProjectSection
 EndProject
