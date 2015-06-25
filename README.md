@@ -5,12 +5,13 @@
 ## These libraries allow you to:
 
 * connect to Odoo over XMLRpc.
-* annotate your C# classes with **OdooPropery**, **OdooMany2one** and **OdooOne2many** attributes.
+* annotate your C# classes with **OdooProperty**, **OdooMany2one** and **OdooOne2many** attributes.
 * search/read/write/update typed classes automatically to Odoo server using Repository pattern 
 
 ## Guidelines
 
-* This repository is a visual studio project
+* This repository is a visual studio solution.
+* The only external reference of this solution is NUnit testing library. 
 * OdooRpcWrapper is the core library who transforms the attribute annotations in XMLRpc structs
 * OdooTypedClasses is a class library containing some example classes that you can use or inherit from, you can configure your own classes from scratch.
 
