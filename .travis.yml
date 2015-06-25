@@ -9,7 +9,9 @@ addons:
       - python-serial
 
 env:
-  global:
+  matrix:
+  - VERSION="6.1"
+  - VERSION="7.0"
   - VERSION="8.0"
 
 install:
@@ -21,8 +23,8 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 script:
-  - /home/travis/odoo-8.0/openerp-server -d test -i crm,sale --stop-after-init --workers=0 --log-level=warn
-  - /home/travis/odoo-8.0/openerp-server -d test --log-level=warn &
+  - /home/travis/odoo-${VERSION}/openerp-server -d test -i crm,sale --stop-after-init --workers=0 --log-level=warn
+  - /home/travis/odoo-${VERSION}/openerp-server -d test --log-level=warn &
   - sleep 5
   - xbuild /p:Configuration=Release OdooDotNet.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Testing/bin/Release/Testing.dll
