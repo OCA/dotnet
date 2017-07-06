@@ -1,0 +1,28 @@
+language: csharp
+solution: OdooDotNet.sln
+addons:
+  apt:
+    packages:
+      - expect-dev  # provides unbuffer utility
+      - python-lxml  # because pip installation is slow
+      - python-simplejson
+      - python-serial
+
+env:
+  matrix:
+  - VERSION="8.0"
+
+install:
+  - createdb test
+  - git clone https://github.com/vauxoo-dev/maintainer-quality-tools.git -b master-oca-install-wo-usr-moy ${HOME}/maintainer-quality-tools
+  - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
+  - travis_install_nightly
+  - nuget restore OdooDotNet.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
+script:
+  - /home/travis/odoo-${VERSION}/openerp-server -d test -i crm,sale --stop-after-init --workers=0 --log-level=warn
+  - /home/travis/odoo-${VERSION}/openerp-server -d test --log-level=warn &
+  - sleep 5
+  - xbuild /p:Configuration=Release OdooDotNet.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Testing/bin/Release/Testing.dll
